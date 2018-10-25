@@ -52,7 +52,7 @@ SIGNAL("B")
 	PARENT = "";
 }
 
-SIGNAL("Carry_In")
+SIGNAL("Op")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -62,7 +62,7 @@ SIGNAL("Carry_In")
 	PARENT = "";
 }
 
-SIGNAL("Carry_Out")
+SIGNAL("Saida")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -79,20 +79,6 @@ TRANSITION_LIST("A")
 		REPEAT = 1;
 		NODE
 		{
-			REPEAT = 25;
-			LEVEL 0 FOR 20.0;
-			LEVEL 1 FOR 20.0;
-		}
-	}
-}
-
-TRANSITION_LIST("B")
-{
-	NODE
-	{
-		REPEAT = 1;
-		NODE
-		{
 			REPEAT = 50;
 			LEVEL 0 FOR 10.0;
 			LEVEL 1 FOR 10.0;
@@ -100,7 +86,7 @@ TRANSITION_LIST("B")
 	}
 }
 
-TRANSITION_LIST("Carry_In")
+TRANSITION_LIST("B")
 {
 	NODE
 	{
@@ -114,21 +100,49 @@ TRANSITION_LIST("Carry_In")
 	}
 }
 
-TRANSITION_LIST("Carry_Out")
+TRANSITION_LIST("Op")
 {
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 1000.0;
+		NODE
+		{
+			REPEAT = 25;
+			LEVEL 0 FOR 20.0;
+			LEVEL 1 FOR 20.0;
+		}
 	}
+}
+
+TRANSITION_LIST("Saida")
+{
+	NODE
+	{
+		REPEAT = 1;
+		NODE
+		{
+			REPEAT = 50;
+			LEVEL 0 FOR 10.0;
+			LEVEL 1 FOR 10.0;
+		}
+	}
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "Op";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 0;
+	TREE_LEVEL = 0;
 }
 
 DISPLAY_LINE
 {
 	CHANNEL = "A";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
-	TREE_INDEX = 0;
+	RADIX = Unsigned;
+	TREE_INDEX = 1;
 	TREE_LEVEL = 0;
 }
 
@@ -136,25 +150,16 @@ DISPLAY_LINE
 {
 	CHANNEL = "B";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
-	TREE_INDEX = 1;
-	TREE_LEVEL = 0;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "Carry_In";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Unsigned;
 	TREE_INDEX = 2;
 	TREE_LEVEL = 0;
 }
 
 DISPLAY_LINE
 {
-	CHANNEL = "Carry_Out";
+	CHANNEL = "Saida";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = ASCII;
+	RADIX = Unsigned;
 	TREE_INDEX = 3;
 	TREE_LEVEL = 0;
 }
