@@ -1,0 +1,85 @@
+|Complemento2
+Overflow <= Sum4Bit:inst6.Overflow
+B[0] => inst1.IN0
+B[1] => inst2.IN0
+B[2] => inst3.IN0
+B[3] => inst4.IN0
+RComple[0] <= Sum4Bit:inst6.R[0]
+RComple[1] <= Sum4Bit:inst6.R[1]
+RComple[2] <= Sum4Bit:inst6.R[2]
+RComple[3] <= Sum4Bit:inst6.R[3]
+
+
+|Complemento2|Sum4Bit:inst6
+Overflow <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+P => SumBitBit:inst.Carry_In
+A0 => SumBitBit:inst.A
+B0 => SumBitBit:inst.B
+A1 => SumBitBit:inst1.A
+B1 => SumBitBit:inst1.B
+A2 => SumBitBit:inst2.A
+B2 => SumBitBit:inst2.B
+A3 => SumBitBit:inst3.A
+B3 => SumBitBit:inst3.B
+R[0] <= SumBitBit:inst.Result
+R[1] <= SumBitBit:inst1.Result
+R[2] <= SumBitBit:inst2.Result
+R[3] <= SumBitBit:inst3.Result
+
+
+|Complemento2|Sum4Bit:inst6|SumBitBit:inst3
+Result <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+Carry_In => inst.IN0
+Carry_In => inst4.IN1
+Carry_In => inst3.IN1
+A => inst.IN1
+A => inst3.IN0
+A => inst5.IN1
+B => inst2.IN1
+B => inst4.IN0
+B => inst5.IN0
+Carry_Out <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Complemento2|Sum4Bit:inst6|SumBitBit:inst2
+Result <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+Carry_In => inst.IN0
+Carry_In => inst4.IN1
+Carry_In => inst3.IN1
+A => inst.IN1
+A => inst3.IN0
+A => inst5.IN1
+B => inst2.IN1
+B => inst4.IN0
+B => inst5.IN0
+Carry_Out <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Complemento2|Sum4Bit:inst6|SumBitBit:inst1
+Result <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+Carry_In => inst.IN0
+Carry_In => inst4.IN1
+Carry_In => inst3.IN1
+A => inst.IN1
+A => inst3.IN0
+A => inst5.IN1
+B => inst2.IN1
+B => inst4.IN0
+B => inst5.IN0
+Carry_Out <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Complemento2|Sum4Bit:inst6|SumBitBit:inst
+Result <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+Carry_In => inst.IN0
+Carry_In => inst4.IN1
+Carry_In => inst3.IN1
+A => inst.IN1
+A => inst3.IN0
+A => inst5.IN1
+B => inst2.IN1
+B => inst4.IN0
+B => inst5.IN0
+Carry_Out <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+
+

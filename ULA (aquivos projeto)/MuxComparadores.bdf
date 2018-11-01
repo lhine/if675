@@ -86,7 +86,7 @@ applicable agreement for further details.
 )
 (pin
 	(output)
-	(rect 808 200 1002 216)
+	(rect 808 200 984 216)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "SaidaComparadores" (rect 90 0 189 12)(font "Arial" ))
 	(pt 0 8)
@@ -185,11 +185,6 @@ applicable agreement for further details.
 	(bus)
 )
 (connector
-	(pt 616 360)
-	(pt 712 360)
-	(bus)
-)
-(connector
 	(text "S[0]" (rect 552 333 564 353)(font "Arial" )(vertical))
 	(pt 568 336)
 	(pt 568 360)
@@ -210,4 +205,3 @@ applicable agreement for further details.
 )
 (junction (pt 568 360))
 (junction (pt 592 360))
-(junction (pt 616 360))

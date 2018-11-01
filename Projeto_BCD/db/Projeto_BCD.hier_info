@@ -1,0 +1,239 @@
+|MAIN_BCD
+LedDezena[0] <= converso_dezena:inst5.Saida2[0]
+LedDezena[1] <= converso_dezena:inst5.Saida2[1]
+LedDezena[2] <= converso_dezena:inst5.Saida2[2]
+LedDezena[3] <= converso_dezena:inst5.Saida2[3]
+LedDezena[4] <= converso_dezena:inst5.Saida2[4]
+LedDezena[5] <= converso_dezena:inst5.Saida2[5]
+LedDezena[6] <= converso_dezena:inst5.Saida2[6]
+A[0] => Somador_BCD_2Dig:inst.A[0]
+A[1] => Somador_BCD_2Dig:inst.A[1]
+A[2] => Somador_BCD_2Dig:inst.A[2]
+A[3] => Somador_BCD_2Dig:inst.A[3]
+B[0] => Somador_BCD_2Dig:inst.B[0]
+B[1] => Somador_BCD_2Dig:inst.B[1]
+B[2] => Somador_BCD_2Dig:inst.B[2]
+B[3] => Somador_BCD_2Dig:inst.B[3]
+LedUnidade[0] <= display_bcd:inst1.Saida[0]
+LedUnidade[1] <= display_bcd:inst1.Saida[1]
+LedUnidade[2] <= display_bcd:inst1.Saida[2]
+LedUnidade[3] <= display_bcd:inst1.Saida[3]
+LedUnidade[4] <= display_bcd:inst1.Saida[4]
+LedUnidade[5] <= display_bcd:inst1.Saida[5]
+LedUnidade[6] <= display_bcd:inst1.Saida[6]
+
+
+|MAIN_BCD|converso_dezena:inst5
+Saida2[0] <= <GND>
+Saida2[1] <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+Saida2[2] <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+Saida2[3] <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+Saida2[4] <= <VCC>
+Saida2[5] <= <VCC>
+Saida2[6] <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+pin_name => inst8.IN0
+pin_name3 => inst7.IN0
+pin_name4 => inst6.IN0
+pin_name5 => inst5.IN0
+
+
+|MAIN_BCD|Somador_BCD_2Dig:inst
+Cout <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+A[0] => SumBitBit:inst5.A
+A[1] => SumBitBit:inst4.A
+A[2] => SumBitBit:inst3.A
+A[3] => SumBitBit:inst2.A
+B[0] => SumBitBit:inst5.B
+B[1] => SumBitBit:inst4.B
+B[2] => SumBitBit:inst3.B
+B[3] => SumBitBit:inst2.B
+SF[0] <= SumBitBit:inst5.Result
+SF[1] <= SumBitBit:inst6.Result
+SF[2] <= SumBitBit:inst8.Result
+SF[3] <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MAIN_BCD|Somador_BCD_2Dig:inst|SumBitBit:inst2
+Result <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+Carry_In => inst.IN0
+Carry_In => inst4.IN1
+Carry_In => inst3.IN1
+A => inst.IN1
+A => inst3.IN0
+A => inst5.IN1
+B => inst2.IN1
+B => inst4.IN0
+B => inst5.IN0
+Carry_Out <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MAIN_BCD|Somador_BCD_2Dig:inst|SumBitBit:inst3
+Result <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+Carry_In => inst.IN0
+Carry_In => inst4.IN1
+Carry_In => inst3.IN1
+A => inst.IN1
+A => inst3.IN0
+A => inst5.IN1
+B => inst2.IN1
+B => inst4.IN0
+B => inst5.IN0
+Carry_Out <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MAIN_BCD|Somador_BCD_2Dig:inst|SumBitBit:inst4
+Result <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+Carry_In => inst.IN0
+Carry_In => inst4.IN1
+Carry_In => inst3.IN1
+A => inst.IN1
+A => inst3.IN0
+A => inst5.IN1
+B => inst2.IN1
+B => inst4.IN0
+B => inst5.IN0
+Carry_Out <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MAIN_BCD|Somador_BCD_2Dig:inst|SumBitBit:inst5
+Result <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+Carry_In => inst.IN0
+Carry_In => inst4.IN1
+Carry_In => inst3.IN1
+A => inst.IN1
+A => inst3.IN0
+A => inst5.IN1
+B => inst2.IN1
+B => inst4.IN0
+B => inst5.IN0
+Carry_Out <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MAIN_BCD|Somador_BCD_2Dig:inst|SumBitBit:inst8
+Result <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+Carry_In => inst.IN0
+Carry_In => inst4.IN1
+Carry_In => inst3.IN1
+A => inst.IN1
+A => inst3.IN0
+A => inst5.IN1
+B => inst2.IN1
+B => inst4.IN0
+B => inst5.IN0
+Carry_Out <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MAIN_BCD|Somador_BCD_2Dig:inst|SumBitBit:inst6
+Result <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+Carry_In => inst.IN0
+Carry_In => inst4.IN1
+Carry_In => inst3.IN1
+A => inst.IN1
+A => inst3.IN0
+A => inst5.IN1
+B => inst2.IN1
+B => inst4.IN0
+B => inst5.IN0
+Carry_Out <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MAIN_BCD|display_bcd:inst1
+Saida[0] <= led_g:inst6.LED_G
+Saida[1] <= led_f:inst5.LED_F
+Saida[2] <= led_e:inst4.LED_E
+Saida[3] <= led_d:inst3.LED_D
+Saida[4] <= led_c:inst2.LED_C
+Saida[5] <= led_b:inst1.LED_B
+Saida[6] <= led_a:inst.LED_A
+Entrada[0] => led_d:inst3.D
+Entrada[0] => led_a:inst.D
+Entrada[0] => led_b:inst1.D
+Entrada[0] => led_c:inst2.D
+Entrada[0] => led_e:inst4.D
+Entrada[0] => led_f:inst5.D
+Entrada[0] => led_g:inst6.D
+Entrada[1] => led_d:inst3.C
+Entrada[1] => led_a:inst.C
+Entrada[1] => led_b:inst1.C
+Entrada[1] => led_c:inst2.C
+Entrada[1] => led_e:inst4.C
+Entrada[1] => led_f:inst5.C
+Entrada[1] => led_g:inst6.C
+Entrada[2] => led_d:inst3.B
+Entrada[2] => led_a:inst.B
+Entrada[2] => led_b:inst1.B
+Entrada[2] => led_c:inst2.B
+Entrada[2] => led_e:inst4.B
+Entrada[2] => led_f:inst5.B
+Entrada[2] => led_g:inst6.B
+Entrada[3] => led_d:inst3.A
+Entrada[3] => led_a:inst.A
+Entrada[3] => led_f:inst5.A
+Entrada[3] => led_g:inst6.A
+
+
+|MAIN_BCD|display_bcd:inst1|led_d:inst3
+LED_D <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+C => inst6.IN0
+C => inst5.IN1
+C => inst4.IN0
+B => inst2.IN0
+B => inst7.IN0
+D => inst3.IN0
+D => inst7.IN2
+
+
+|MAIN_BCD|display_bcd:inst1|led_a:inst
+LED_A <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+B => inst14.IN0
+B => inst11.IN0
+D => inst14.IN1
+D => inst12.IN0
+C => inst.IN3
+
+
+|MAIN_BCD|display_bcd:inst1|led_b:inst1
+LED_B <= inst.DB_MAX_OUTPUT_PORT_TYPE
+C => inst14.IN0
+C => inst11.IN0
+D => inst14.IN1
+D => inst12.IN0
+B => inst7.IN0
+
+
+|MAIN_BCD|display_bcd:inst1|led_c:inst2
+LED_C <= inst.DB_MAX_OUTPUT_PORT_TYPE
+B => inst.IN0
+C => inst4.IN0
+D => inst.IN2
+
+
+|MAIN_BCD|display_bcd:inst1|led_e:inst4
+LED_E <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+D => inst3.IN0
+C => inst6.IN1
+B => inst4.IN0
+
+
+|MAIN_BCD|display_bcd:inst1|led_f:inst5
+LED_F <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+A => inst6.IN0
+C => inst8.IN0
+B => inst5.IN1
+B => inst4.IN1
+D => inst7.IN0
+
+
+|MAIN_BCD|display_bcd:inst1|led_g:inst6
+LED_G <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+C => inst8.IN0
+C => inst9.IN0
+C => inst6.IN1
+D => inst7.IN0
+B => inst10.IN0
+B => inst5.IN0
+
+

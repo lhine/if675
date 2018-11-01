@@ -1,0 +1,443 @@
+Quartus II
+Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+7
+3700
+OFF
+OFF
+OFF
+ON
+ON
+ON
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+OutroMux
+# storage
+db|ULA.(1).cnf
+db|ULA.(1).cnf
+# case_insensitive
+# source_file
+|users|bmgs|desktop|projeto_sd-master|projeto_sd-master|ula (aquivos projeto)|outromux.bdf
+522cfa4ff246c80cc90479dd1efb9b6
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# macro_sequence
+
+# end
+# entity
+Sum_Sub
+# storage
+db|ULA.(2).cnf
+db|ULA.(2).cnf
+# case_insensitive
+# source_file
+|users|bmgs|desktop|projeto_sd-master|projeto_sd-master|ula (aquivos projeto)|sum_sub.bdf
+5490fdbc4ba92d78d13a5af220168dab
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# macro_sequence
+
+# end
+# entity
+Sum4Bit
+# storage
+db|ULA.(3).cnf
+db|ULA.(3).cnf
+# case_insensitive
+# source_file
+|users|bmgs|desktop|projeto_sd-master|projeto_sd-master|ula (aquivos projeto)|sum4bit.bdf
+66401e569a9dd8dc3ac817ea80366abf
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+Sum4Bit:inst6
+}
+# macro_sequence
+
+# end
+# entity
+SumBitBit
+# storage
+db|ULA.(4).cnf
+db|ULA.(4).cnf
+# case_insensitive
+# source_file
+|users|bmgs|desktop|projeto_sd-master|projeto_sd-master|ula (aquivos projeto)|sumbitbit.bdf
+58eee4ef1152c365c654baca863b767
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+Sum4Bit:inst6|SumBitBit:inst3
+Sum4Bit:inst6|SumBitBit:inst2
+Sum4Bit:inst6|SumBitBit:inst1
+Sum4Bit:inst6|SumBitBit:inst
+}
+# macro_sequence
+
+# end
+# entity
+MaiorQ3Bit
+# storage
+db|ULA.(10).cnf
+db|ULA.(10).cnf
+# case_insensitive
+# source_file
+|users|bmgs|desktop|projeto_sd-master|projeto_sd-master|ula (aquivos projeto)|maiorq3bit.bdf
+77faa99d124883951cc0726e80d79d16
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# macro_sequence
+
+# end
+# entity
+MaiorQ1Bit
+# storage
+db|ULA.(11).cnf
+db|ULA.(11).cnf
+# case_insensitive
+# source_file
+|users|bmgs|desktop|projeto_sd-master|projeto_sd-master|ula (aquivos projeto)|maiorq1bit.bdf
+a14d51de44cfb72f3723616fab496a2a
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# macro_sequence
+
+# end
+# entity
+Igual4Bits
+# storage
+db|ULA.(12).cnf
+db|ULA.(12).cnf
+# case_insensitive
+# source_file
+|users|bmgs|desktop|projeto_sd-master|projeto_sd-master|ula (aquivos projeto)|igual4bits.bdf
+519d4628fbe0268c5266c2bb8e958545
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# macro_sequence
+
+# end
+# entity
+And4Bit
+# storage
+db|ULA.(15).cnf
+db|ULA.(15).cnf
+# case_insensitive
+# source_file
+|users|bmgs|desktop|projeto_sd-master|projeto_sd-master|ula (aquivos projeto)|and4bit.bdf
+6ce98b58c4cfe649fdb544d1e7d83bb
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# macro_sequence
+
+# end
+# entity
+XOR4Bits
+# storage
+db|ULA.(16).cnf
+db|ULA.(16).cnf
+# case_insensitive
+# source_file
+|users|bmgs|desktop|projeto_sd-master|projeto_sd-master|ula (aquivos projeto)|xor4bits.bdf
+8e79d9b478e4ce8f22d5d89a310dfcd
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# macro_sequence
+
+# end
+# entity
+Signal
+# storage
+db|ULA.(9).cnf
+db|ULA.(9).cnf
+# case_insensitive
+# source_file
+|users|bmgs|desktop|projeto_sd-master|projeto_sd-master|ula (aquivos projeto)|signal.bdf
+5c699d03b032ea954281ef613b729b
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# macro_sequence
+
+# end
+# entity
+MuxComparadores
+# storage
+db|ULA.(6).cnf
+db|ULA.(6).cnf
+# case_insensitive
+# source_file
+|users|bmgs|desktop|projeto_sd-master|projeto_sd-master|ula (aquivos projeto)|muxcomparadores.bdf
+aa51ad9553dff5d1c9cef284cd3c88b
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# macro_sequence
+
+# end
+# entity
+Mux3to1
+# storage
+db|ULA.(0).cnf
+db|ULA.(0).cnf
+# case_insensitive
+# source_file
+|users|bmgs|desktop|projeto_sd-master|projeto_sd-master|ula (aquivos projeto)|mux3to1.bdf
+e63f24cd14d5e1aa53ac26c9bbd82f8
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# macro_sequence
+
+# end
+# entity
+Maior_Menor
+# storage
+db|ULA.(8).cnf
+db|ULA.(8).cnf
+# case_insensitive
+# source_file
+|users|bmgs|desktop|projeto_sd-master|projeto_sd-master|ula (aquivos projeto)|maior_menor.bdf
+bc922c7d114738663af29425371d6cc5
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# macro_sequence
+
+# end
+# entity
+ULA
+# storage
+db|ULA.(5).cnf
+db|ULA.(5).cnf
+# case_insensitive
+# source_file
+ula.bdf
+1993e638985a9eb3d97e37b312ff816
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# macro_sequence
+
+# end
+# entity
+conversor_ula
+# storage
+db|ULA.(7).cnf
+db|ULA.(7).cnf
+# case_insensitive
+# source_file
+|users|bmgs|desktop|projeto_sd-master|projeto_sd-master|ula (aquivos projeto)|display_ula|conversor_ula.bdf
+b83a63f4f535d3b34ff81a68e168929
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# macro_sequence
+
+# end
+# entity
+led_a
+# storage
+db|ULA.(14).cnf
+db|ULA.(14).cnf
+# case_insensitive
+# source_file
+|users|bmgs|desktop|projeto_sd-master|projeto_sd-master|ula (aquivos projeto)|display_ula|led_a.bdf
+21202329543f28327414c7bc173ab0ed
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# macro_sequence
+
+# end
+# entity
+led_b
+# storage
+db|ULA.(17).cnf
+db|ULA.(17).cnf
+# case_insensitive
+# source_file
+|users|bmgs|desktop|projeto_sd-master|projeto_sd-master|ula (aquivos projeto)|display_ula|led_b.bdf
+5b58f75d3c4a09ed9f2397415f77
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# macro_sequence
+
+# end
+# entity
+led_d
+# storage
+db|ULA.(19).cnf
+db|ULA.(19).cnf
+# case_insensitive
+# source_file
+|users|bmgs|desktop|projeto_sd-master|projeto_sd-master|ula (aquivos projeto)|display_ula|led_d.bdf
+8453b4d378906418e5994428dc6e7c
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# macro_sequence
+
+# end
+# entity
+led_e
+# storage
+db|ULA.(20).cnf
+db|ULA.(20).cnf
+# case_insensitive
+# source_file
+|users|bmgs|desktop|projeto_sd-master|projeto_sd-master|ula (aquivos projeto)|display_ula|led_e.bdf
+44276c7ba137d9e19c050c84483d51c
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# macro_sequence
+
+# end
+# entity
+led_f
+# storage
+db|ULA.(21).cnf
+db|ULA.(21).cnf
+# case_insensitive
+# source_file
+|users|bmgs|desktop|projeto_sd-master|projeto_sd-master|ula (aquivos projeto)|display_ula|led_f.bdf
+a3f2d1382afd72f3a34aa9eadbfc9e45
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# macro_sequence
+
+# end
+# entity
+led_g
+# storage
+db|ULA.(22).cnf
+db|ULA.(22).cnf
+# case_insensitive
+# source_file
+|users|bmgs|desktop|projeto_sd-master|projeto_sd-master|ula (aquivos projeto)|display_ula|led_g.bdf
+245101110273cca498677181d78bf
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# macro_sequence
+
+# end
+# entity
+display_ula
+# storage
+db|ULA.(13).cnf
+db|ULA.(13).cnf
+# case_insensitive
+# source_file
+|users|bmgs|desktop|projeto_sd-master|projeto_sd-master|ula (aquivos projeto)|display_ula|display_ula.bdf
+78d9ef42bc7ecbe1c4bff22b78ed6f8c
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# macro_sequence
+
+# end
+# entity
+led_c
+# storage
+db|ULA.(18).cnf
+db|ULA.(18).cnf
+# case_insensitive
+# source_file
+|users|bmgs|desktop|projeto_sd-master|projeto_sd-master|ula (aquivos projeto)|display_ula|led_c.bdf
+56be9da9c49d4c787036c04fa5f61c
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# macro_sequence
+
+# end
+# entity
+Complemento2
+# storage
+db|ULA.(23).cnf
+db|ULA.(23).cnf
+# case_insensitive
+# source_file
+|users|bmgs|desktop|projeto_sd-master|projeto_sd-master|ula (aquivos projeto)|complemento2.bdf
+11c4c2ed7522e4dc9a15ec98c88618ec
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# complete
+

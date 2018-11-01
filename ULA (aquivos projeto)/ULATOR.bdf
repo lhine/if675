@@ -137,20 +137,19 @@ applicable agreement for further details.
 )
 (pin
 	(output)
-	(rect 1592 568 1608 744)
-	(text "OUTPUT" (rect 6 1 16 39)(font "Arial" (font_size 6))(vertical))
-	(text "SaidaComparadores" (rect 4 90 16 189)(font "Arial" )(vertical))
-	(pt 8 0)
+	(rect 2096 560 2272 576)
+	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
+	(text "SaidaComparadores" (rect 90 0 189 12)(font "Arial" ))
+	(pt 0 8)
 	(drawing
-		(line (pt 8 0)(pt 8 52)(line_width 1))
-		(line (pt 12 52)(pt 12 78)(line_width 1))
-		(line (pt 4 52)(pt 4 78)(line_width 1))
-		(line (pt 4 52)(pt 12 52)(line_width 1))
-		(line (pt 12 78)(pt 8 82)(line_width 1))
-		(line (pt 8 82)(pt 4 78)(line_width 1))
-		(line (pt 4 78)(pt 8 82)(line_width 1))
+		(line (pt 0 8)(pt 52 8)(line_width 1))
+		(line (pt 52 4)(pt 78 4)(line_width 1))
+		(line (pt 52 12)(pt 78 12)(line_width 1))
+		(line (pt 52 12)(pt 52 4)(line_width 1))
+		(line (pt 78 4)(pt 82 8)(line_width 1))
+		(line (pt 82 8)(pt 78 12)(line_width 1))
+		(line (pt 78 12)(pt 82 8)(line_width 1))
 	)
-	(rotate270)
 )
 (symbol
 	(rect 1024 112 1176 208)
@@ -825,10 +824,6 @@ applicable agreement for further details.
 	(bus)
 )
 (connector
-	(pt 1568 568)
-	(pt 1600 568)
-)
-(connector
 	(pt 1456 664)
 	(pt 1456 800)
 	(bus)
@@ -844,6 +839,10 @@ applicable agreement for further details.
 (connector
 	(pt 1352 568)
 	(pt 1200 568)
+)
+(connector
+	(pt 1568 568)
+	(pt 2096 568)
 )
 (junction (pt 904 144))
 (junction (pt 880 176))

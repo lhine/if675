@@ -1,0 +1,268 @@
+Quartus II
+Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+7
+3700
+OFF
+OFF
+OFF
+ON
+ON
+ON
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+SumBitBit
+# storage
+db|Projeto_BCD.(1).cnf
+db|Projeto_BCD.(1).cnf
+# case_insensitive
+# source_file
+|users|bmgs|desktop|projeto_sd-master|projeto_sd-master|ula (aquivos projeto)|sumbitbit.bdf
+58eee4ef1152c365c654baca863b767
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+Somador_BCD_2Dig:inst|SumBitBit:inst2
+Somador_BCD_2Dig:inst|SumBitBit:inst3
+Somador_BCD_2Dig:inst|SumBitBit:inst4
+Somador_BCD_2Dig:inst|SumBitBit:inst5
+Somador_BCD_2Dig:inst|SumBitBit:inst8
+Somador_BCD_2Dig:inst|SumBitBit:inst6
+}
+# macro_sequence
+
+# end
+# entity
+converso_dezena
+# storage
+db|Projeto_BCD.(0).cnf
+db|Projeto_BCD.(0).cnf
+# case_insensitive
+# source_file
+converso_dezena.bdf
+ab59967fde55d5523957b7e8aa81c2a
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+converso_dezena:inst5
+}
+# macro_sequence
+
+# end
+# entity
+MAIN_BCD
+# storage
+db|Projeto_BCD.(2).cnf
+db|Projeto_BCD.(2).cnf
+# case_insensitive
+# source_file
+main_bcd.bdf
+8b93e71b8d0dd8c7ac9bd1ab7bbb8a
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# entity
+Somador_BCD_2Dig
+# storage
+db|Projeto_BCD.(3).cnf
+db|Projeto_BCD.(3).cnf
+# case_insensitive
+# source_file
+somador_bcd_2dig.bdf
+42d2ced7d15514bcc4a3179de6b35ce
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+Somador_BCD_2Dig:inst
+}
+# macro_sequence
+
+# end
+# entity
+display_bcd
+# storage
+db|Projeto_BCD.(4).cnf
+db|Projeto_BCD.(4).cnf
+# case_insensitive
+# source_file
+display_bcd|display_bcd.bdf
+b62d2a73a9874dbb683a52e57ae84b8
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+display_bcd:inst1
+}
+# macro_sequence
+
+# end
+# entity
+led_d
+# storage
+db|Projeto_BCD.(5).cnf
+db|Projeto_BCD.(5).cnf
+# case_insensitive
+# source_file
+display_bcd|led_d.bdf
+b661a9be2cef87c6b81dc5ee46ec362
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+display_bcd:inst1|led_d:inst3
+}
+# macro_sequence
+
+# end
+# entity
+led_a
+# storage
+db|Projeto_BCD.(6).cnf
+db|Projeto_BCD.(6).cnf
+# case_insensitive
+# source_file
+display_bcd|led_a.bdf
+6d2ecb2537a8bbdf25e25b398a42235
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+display_bcd:inst1|led_a:inst
+}
+# macro_sequence
+
+# end
+# entity
+led_b
+# storage
+db|Projeto_BCD.(7).cnf
+db|Projeto_BCD.(7).cnf
+# case_insensitive
+# source_file
+display_bcd|led_b.bdf
+d9c75ed71afef4820d6d2a930b47465
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+display_bcd:inst1|led_b:inst1
+}
+# macro_sequence
+
+# end
+# entity
+led_c
+# storage
+db|Projeto_BCD.(8).cnf
+db|Projeto_BCD.(8).cnf
+# case_insensitive
+# source_file
+display_bcd|led_c.bdf
+833ab069c2c059df287a66bc2ee9dc91
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+display_bcd:inst1|led_c:inst2
+}
+# macro_sequence
+
+# end
+# entity
+led_e
+# storage
+db|Projeto_BCD.(9).cnf
+db|Projeto_BCD.(9).cnf
+# case_insensitive
+# source_file
+display_bcd|led_e.bdf
+3d2bbfb1a84d2215b443cc768f67fed
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+display_bcd:inst1|led_e:inst4
+}
+# macro_sequence
+
+# end
+# entity
+led_f
+# storage
+db|Projeto_BCD.(10).cnf
+db|Projeto_BCD.(10).cnf
+# case_insensitive
+# source_file
+display_bcd|led_f.bdf
+97762db6192b1a72e74b8e1d7769504
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+display_bcd:inst1|led_f:inst5
+}
+# macro_sequence
+
+# end
+# entity
+led_g
+# storage
+db|Projeto_BCD.(11).cnf
+db|Projeto_BCD.(11).cnf
+# case_insensitive
+# source_file
+display_bcd|led_g.bdf
+e1a84e8f0b3c77235ed3598fe7d948
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+display_bcd:inst1|led_g:inst6
+}
+# macro_sequence
+
+# end
+# complete
+

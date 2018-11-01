@@ -1,0 +1,320 @@
+Analysis & Synthesis report for Projeto_BCD
+Wed Oct 31 20:42:18 2018
+Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                 ;
++-------------------------------+----------------------------------------------+
+; Analysis & Synthesis Status   ; Successful - Wed Oct 31 20:42:18 2018        ;
+; Quartus II Version            ; 9.1 Build 350 03/24/2010 SP 2 SJ Web Edition ;
+; Revision Name                 ; Projeto_BCD                                  ;
+; Top-level Entity Name         ; MAIN_BCD                                     ;
+; Family                        ; Stratix II                                   ;
+; Logic utilization             ; N/A                                          ;
+;     Combinational ALUTs       ; 16                                           ;
+;     Dedicated logic registers ; 0                                            ;
+; Total registers               ; 0                                            ;
+; Total pins                    ; 22                                           ;
+; Total virtual pins            ; 0                                            ;
+; Total block memory bits       ; 0                                            ;
+; DSP block 9-bit elements      ; 0                                            ;
+; Total PLLs                    ; 0                                            ;
+; Total DLLs                    ; 0                                            ;
++-------------------------------+----------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Top-level entity name                                                      ; MAIN_BCD           ; Projeto_BCD        ;
+; Family name                                                                ; Stratix II         ; Stratix II         ;
+; Use Generated Physical Constraints File                                    ; Off                ;                    ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; Off                ; Off                ;
+; Show Parameter Settings Tables in Synthesis Report                         ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     1 processor            ; 100.0%      ;
+;     2-4 processors         ;   0.0%      ;
++----------------------------+-------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                            ;
++----------------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------------------------------+
+; File Name with User-Entered Path       ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                                      ;
++----------------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------------------------------+
+; display_BCD/display_bcd.bdf            ; yes             ; User Block Diagram/Schematic File  ; C:/Users/bmgs/Desktop/projeto_sd-master/projeto_sd-master/Projeto_BCD/display_BCD/display_bcd.bdf ;
+; display_BCD/led_a.bdf                  ; yes             ; User Block Diagram/Schematic File  ; C:/Users/bmgs/Desktop/projeto_sd-master/projeto_sd-master/Projeto_BCD/display_BCD/led_a.bdf       ;
+; display_BCD/led_b.bdf                  ; yes             ; User Block Diagram/Schematic File  ; C:/Users/bmgs/Desktop/projeto_sd-master/projeto_sd-master/Projeto_BCD/display_BCD/led_b.bdf       ;
+; display_BCD/led_c.bdf                  ; yes             ; User Block Diagram/Schematic File  ; C:/Users/bmgs/Desktop/projeto_sd-master/projeto_sd-master/Projeto_BCD/display_BCD/led_c.bdf       ;
+; display_BCD/led_d.bdf                  ; yes             ; User Block Diagram/Schematic File  ; C:/Users/bmgs/Desktop/projeto_sd-master/projeto_sd-master/Projeto_BCD/display_BCD/led_d.bdf       ;
+; display_BCD/led_e.bdf                  ; yes             ; User Block Diagram/Schematic File  ; C:/Users/bmgs/Desktop/projeto_sd-master/projeto_sd-master/Projeto_BCD/display_BCD/led_e.bdf       ;
+; display_BCD/led_f.bdf                  ; yes             ; User Block Diagram/Schematic File  ; C:/Users/bmgs/Desktop/projeto_sd-master/projeto_sd-master/Projeto_BCD/display_BCD/led_f.bdf       ;
+; display_BCD/led_g.bdf                  ; yes             ; User Block Diagram/Schematic File  ; C:/Users/bmgs/Desktop/projeto_sd-master/projeto_sd-master/Projeto_BCD/display_BCD/led_g.bdf       ;
+; ../ULA (aquivos projeto)/SumBitBit.bdf ; yes             ; User Block Diagram/Schematic File  ; C:/Users/bmgs/Desktop/projeto_sd-master/projeto_sd-master/ULA (aquivos projeto)/SumBitBit.bdf     ;
+; Somador_BCD_2Dig.bdf                   ; yes             ; User Block Diagram/Schematic File  ; C:/Users/bmgs/Desktop/projeto_sd-master/projeto_sd-master/Projeto_BCD/Somador_BCD_2Dig.bdf        ;
+; MAIN_BCD.bdf                           ; yes             ; User Block Diagram/Schematic File  ; C:/Users/bmgs/Desktop/projeto_sd-master/projeto_sd-master/Projeto_BCD/MAIN_BCD.bdf                ;
+; converso_dezena.bdf                    ; yes             ; User Block Diagram/Schematic File  ; C:/Users/bmgs/Desktop/projeto_sd-master/projeto_sd-master/Projeto_BCD/converso_dezena.bdf         ;
++----------------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                                   ;
++-----------------------------------------------+-----------------------------------------------+
+; Resource                                      ; Usage                                         ;
++-----------------------------------------------+-----------------------------------------------+
+; Estimated ALUTs Used                          ; 16                                            ;
+; Dedicated logic registers                     ; 0                                             ;
+;                                               ;                                               ;
+; Estimated ALUTs Unavailable                   ; 2                                             ;
+;                                               ;                                               ;
+; Total combinational functions                 ; 16                                            ;
+; Combinational ALUT usage by number of inputs  ;                                               ;
+;     -- 7 input functions                      ; 0                                             ;
+;     -- 6 input functions                      ; 2                                             ;
+;     -- 5 input functions                      ; 9                                             ;
+;     -- 4 input functions                      ; 4                                             ;
+;     -- <=3 input functions                    ; 1                                             ;
+;                                               ;                                               ;
+; Combinational ALUTs by mode                   ;                                               ;
+;     -- normal mode                            ; 16                                            ;
+;     -- extended LUT mode                      ; 0                                             ;
+;     -- arithmetic mode                        ; 0                                             ;
+;     -- shared arithmetic mode                 ; 0                                             ;
+;                                               ;                                               ;
+; Estimated ALUT/register pairs used            ; 18                                            ;
+;                                               ;                                               ;
+; Total registers                               ; 0                                             ;
+;     -- Dedicated logic registers              ; 0                                             ;
+;     -- I/O registers                          ; 0                                             ;
+;                                               ;                                               ;
+; Estimated ALMs:  partially or completely used ; 9                                             ;
+;                                               ;                                               ;
+; I/O pins                                      ; 22                                            ;
+; Maximum fan-out node                          ; Somador_BCD_2Dig:inst|SumBitBit:inst2|inst6~0 ;
+; Maximum fan-out                               ; 8                                             ;
+; Total fan-out                                 ; 86                                            ;
+; Average fan-out                               ; 2.26                                          ;
++-----------------------------------------------+-----------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                       ;
++----------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+------+--------------+-------------------------------------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name                             ; Library Name ;
++----------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+------+--------------+-------------------------------------------------+--------------+
+; |MAIN_BCD                  ; 16 (0)            ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 22   ; 0            ; |MAIN_BCD                                       ; work         ;
+;    |Somador_BCD_2Dig:inst| ; 9 (1)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MAIN_BCD|Somador_BCD_2Dig:inst                 ; work         ;
+;       |SumBitBit:inst2|    ; 2 (2)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MAIN_BCD|Somador_BCD_2Dig:inst|SumBitBit:inst2 ; work         ;
+;       |SumBitBit:inst3|    ; 3 (3)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MAIN_BCD|Somador_BCD_2Dig:inst|SumBitBit:inst3 ; work         ;
+;       |SumBitBit:inst4|    ; 2 (2)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MAIN_BCD|Somador_BCD_2Dig:inst|SumBitBit:inst4 ; work         ;
+;       |SumBitBit:inst5|    ; 1 (1)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MAIN_BCD|Somador_BCD_2Dig:inst|SumBitBit:inst5 ; work         ;
+;    |display_bcd:inst1|     ; 7 (0)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MAIN_BCD|display_bcd:inst1                     ; work         ;
+;       |led_a:inst|         ; 1 (1)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MAIN_BCD|display_bcd:inst1|led_a:inst          ; work         ;
+;       |led_b:inst1|        ; 1 (1)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MAIN_BCD|display_bcd:inst1|led_b:inst1         ; work         ;
+;       |led_c:inst2|        ; 1 (1)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MAIN_BCD|display_bcd:inst1|led_c:inst2         ; work         ;
+;       |led_d:inst3|        ; 1 (1)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MAIN_BCD|display_bcd:inst1|led_d:inst3         ; work         ;
+;       |led_e:inst4|        ; 1 (1)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MAIN_BCD|display_bcd:inst1|led_e:inst4         ; work         ;
+;       |led_f:inst5|        ; 1 (1)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MAIN_BCD|display_bcd:inst1|led_f:inst5         ; work         ;
+;       |led_g:inst6|        ; 1 (1)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MAIN_BCD|display_bcd:inst1|led_g:inst6         ; work         ;
++----------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+------+--------------+-------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Analysis & Synthesis
+    Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+    Info: Processing started: Wed Oct 31 20:42:16 2018
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Projeto_BCD -c Projeto_BCD
+Info: Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info: Found 1 design units, including 1 entities, in source file display_bcd/display_bcd.bdf
+    Info: Found entity 1: display_bcd
+Info: Found 1 design units, including 1 entities, in source file display_bcd/led_a.bdf
+    Info: Found entity 1: led_a
+Info: Found 1 design units, including 1 entities, in source file display_bcd/led_b.bdf
+    Info: Found entity 1: led_b
+Info: Found 1 design units, including 1 entities, in source file display_bcd/led_c.bdf
+    Info: Found entity 1: led_c
+Info: Found 1 design units, including 1 entities, in source file display_bcd/led_d.bdf
+    Info: Found entity 1: led_d
+Info: Found 1 design units, including 1 entities, in source file display_bcd/led_e.bdf
+    Info: Found entity 1: led_e
+Info: Found 1 design units, including 1 entities, in source file display_bcd/led_f.bdf
+    Info: Found entity 1: led_f
+Info: Found 1 design units, including 1 entities, in source file display_bcd/led_g.bdf
+    Info: Found entity 1: led_g
+Info: Found 1 design units, including 1 entities, in source file /users/bmgs/desktop/projeto_sd-master/projeto_sd-master/ula (aquivos projeto)/sum4bit.bdf
+    Info: Found entity 1: Sum4Bit
+Info: Found 1 design units, including 1 entities, in source file /users/bmgs/desktop/projeto_sd-master/projeto_sd-master/ula (aquivos projeto)/sumbitbit.bdf
+    Info: Found entity 1: SumBitBit
+Info: Found 1 design units, including 1 entities, in source file somador_bcd_2dig.bdf
+    Info: Found entity 1: Somador_BCD_2Dig
+Info: Found 1 design units, including 1 entities, in source file main_bcd.bdf
+    Info: Found entity 1: MAIN_BCD
+Info: Found 1 design units, including 1 entities, in source file converso_dezena.bdf
+    Info: Found entity 1: converso_dezena
+Info: Elaborating entity "MAIN_BCD" for the top level hierarchy
+Info: Elaborating entity "converso_dezena" for hierarchy "converso_dezena:inst5"
+Info: Elaborating entity "Somador_BCD_2Dig" for hierarchy "Somador_BCD_2Dig:inst"
+Info: Elaborating entity "SumBitBit" for hierarchy "Somador_BCD_2Dig:inst|SumBitBit:inst2"
+Info: Elaborating entity "display_bcd" for hierarchy "display_bcd:inst1"
+Info: Elaborating entity "led_d" for hierarchy "display_bcd:inst1|led_d:inst3"
+Info: Elaborating entity "led_a" for hierarchy "display_bcd:inst1|led_a:inst"
+Info: Elaborating entity "led_b" for hierarchy "display_bcd:inst1|led_b:inst1"
+Info: Elaborating entity "led_c" for hierarchy "display_bcd:inst1|led_c:inst2"
+Info: Elaborating entity "led_e" for hierarchy "display_bcd:inst1|led_e:inst4"
+Info: Elaborating entity "led_f" for hierarchy "display_bcd:inst1|led_f:inst5"
+Info: Elaborating entity "led_g" for hierarchy "display_bcd:inst1|led_g:inst6"
+Warning: Output pins are stuck at VCC or GND
+    Warning (13410): Pin "LedDezena[5]" is stuck at VCC
+    Warning (13410): Pin "LedDezena[4]" is stuck at VCC
+    Warning (13410): Pin "LedDezena[0]" is stuck at GND
+Warning: Ignored assignments for entity "Projeto_BCD" -- entity does not exist in design
+    Warning: Assignment for entity set_global_assignment -name LL_ROOT_REGION ON -entity Projeto_BCD -section_id "Root Region" was ignored
+    Warning: Assignment for entity set_global_assignment -name LL_MEMBER_STATE LOCKED -entity Projeto_BCD -section_id "Root Region" was ignored
+Info: Implemented 38 device resources after synthesis - the final resource count might be different
+    Info: Implemented 8 input pins
+    Info: Implemented 14 output pins
+    Info: Implemented 16 logic cells
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 7 warnings
+    Info: Peak virtual memory: 278 megabytes
+    Info: Processing ended: Wed Oct 31 20:42:18 2018
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
+
+

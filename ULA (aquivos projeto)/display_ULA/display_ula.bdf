@@ -24,7 +24,7 @@ applicable agreement for further details.
 	(input)
 	(rect 0 192 168 208)
 	(text "INPUT" (rect 133 0 161 10)(font "Arial" (font_size 6)))
-	(text "Entrada[2..0]" (rect 5 0 68 12)(font "Arial" ))
+	(text "Entrada[2..0]" (rect 9 0 72 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 92 12)(pt 117 12)(line_width 1))
