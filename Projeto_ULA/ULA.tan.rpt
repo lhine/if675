@@ -1,5 +1,5 @@
 Classic Timing Analyzer report for ULA
-Wed Oct 31 20:54:01 2018
+Sun Nov 04 17:20:22 2018
 Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
 
 
@@ -34,14 +34,14 @@ applicable agreement for further details.
 
 
 
-+-------------------------------------------------------------------------------------------------------------------------------+
-; Timing Analyzer Summary                                                                                                       ;
-+------------------------------+-------+---------------+-------------+------+------------+------------+----------+--------------+
-; Type                         ; Slack ; Required Time ; Actual Time ; From ; To         ; From Clock ; To Clock ; Failed Paths ;
-+------------------------------+-------+---------------+-------------+------+------------+------------+----------+--------------+
-; Worst-case tpd               ; N/A   ; None          ; 9.658 ns    ; B[0] ; RComple[2] ; --         ; --       ; 0            ;
-; Total number of failed paths ;       ;               ;             ;      ;            ;            ;          ; 0            ;
-+------------------------------+-------+---------------+-------------+------+------------+------------+----------+--------------+
++------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                                                                            ;
++------------------------------+-------+---------------+-------------+------------+-----------+------------+----------+--------------+
+; Type                         ; Slack ; Required Time ; Actual Time ; From       ; To        ; From Clock ; To Clock ; Failed Paths ;
++------------------------------+-------+---------------+-------------+------------+-----------+------------+----------+--------------+
+; Worst-case tpd               ; N/A   ; None          ; 10.316 ns   ; Entrada[1] ; numero[0] ; --         ; --       ; 0            ;
+; Total number of failed paths ;       ;               ;             ;            ;           ;            ;          ; 0            ;
++------------------------------+-------+---------------+-------------+------------+-----------+------------+----------+--------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -93,26 +93,34 @@ applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+-----------------------------------------------------------------+
-; tpd                                                             ;
-+-------+-------------------+-----------------+------+------------+
-; Slack ; Required P2P Time ; Actual P2P Time ; From ; To         ;
-+-------+-------------------+-----------------+------+------------+
-; N/A   ; None              ; 9.658 ns        ; B[0] ; RComple[2] ;
-; N/A   ; None              ; 9.531 ns        ; B[2] ; RComple[2] ;
-; N/A   ; None              ; 9.482 ns        ; B[1] ; RComple[2] ;
-; N/A   ; None              ; 9.287 ns        ; B[0] ; RComple[1] ;
-; N/A   ; None              ; 9.110 ns        ; B[1] ; RComple[1] ;
-; N/A   ; None              ; 8.250 ns        ; B[0] ; RComple[3] ;
-; N/A   ; None              ; 8.122 ns        ; B[2] ; RComple[3] ;
-; N/A   ; None              ; 8.096 ns        ; B[3] ; RComple[3] ;
-; N/A   ; None              ; 8.075 ns        ; B[1] ; RComple[3] ;
-; N/A   ; None              ; 8.068 ns        ; B[2] ; Overflow   ;
-; N/A   ; None              ; 8.035 ns        ; B[0] ; Overflow   ;
-; N/A   ; None              ; 7.882 ns        ; B[3] ; Overflow   ;
-; N/A   ; None              ; 7.859 ns        ; B[1] ; Overflow   ;
-; N/A   ; None              ; 7.036 ns        ; B[0] ; RComple[0] ;
-+-------+-------------------+-----------------+------+------------+
++----------------------------------------------------------------------+
+; tpd                                                                  ;
++-------+-------------------+-----------------+------------+-----------+
+; Slack ; Required P2P Time ; Actual P2P Time ; From       ; To        ;
++-------+-------------------+-----------------+------------+-----------+
+; N/A   ; None              ; 10.316 ns       ; Entrada[1] ; numero[0] ;
+; N/A   ; None              ; 10.218 ns       ; Entrada[0] ; numero[0] ;
+; N/A   ; None              ; 10.164 ns       ; Entrada[2] ; numero[0] ;
+; N/A   ; None              ; 10.117 ns       ; Entrada[1] ; numero[4] ;
+; N/A   ; None              ; 10.102 ns       ; Entrada[0] ; numero[4] ;
+; N/A   ; None              ; 10.084 ns       ; Entrada[2] ; numero[4] ;
+; N/A   ; None              ; 9.555 ns        ; Entrada[1] ; numero[1] ;
+; N/A   ; None              ; 9.541 ns        ; Entrada[0] ; numero[1] ;
+; N/A   ; None              ; 9.527 ns        ; Entrada[2] ; numero[1] ;
+; N/A   ; None              ; 9.260 ns        ; Entrada[1] ; numero[6] ;
+; N/A   ; None              ; 9.245 ns        ; Entrada[0] ; numero[6] ;
+; N/A   ; None              ; 9.242 ns        ; Entrada[1] ; numero[5] ;
+; N/A   ; None              ; 9.226 ns        ; Entrada[0] ; numero[5] ;
+; N/A   ; None              ; 9.224 ns        ; Entrada[2] ; numero[6] ;
+; N/A   ; None              ; 9.047 ns        ; Entrada[2] ; numero[5] ;
+; N/A   ; None              ; 8.982 ns        ; Entrada[0] ; numero[2] ;
+; N/A   ; None              ; 8.965 ns        ; Entrada[1] ; numero[3] ;
+; N/A   ; None              ; 8.961 ns        ; Entrada[1] ; numero[2] ;
+; N/A   ; None              ; 8.949 ns        ; Entrada[0] ; numero[3] ;
+; N/A   ; None              ; 8.933 ns        ; Entrada[2] ; numero[2] ;
+; N/A   ; None              ; 8.932 ns        ; Entrada[2] ; numero[3] ;
+; N/A   ; None              ; 7.089 ns        ; Entrada[3] ; led_sinal ;
++-------+-------------------+-----------------+------------+-----------+
 
 
 +--------------------------+
@@ -121,18 +129,18 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II Classic Timing Analyzer
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
-    Info: Processing started: Wed Oct 31 20:54:01 2018
+    Info: Processing started: Sun Nov 04 17:20:22 2018
 Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off ULA -c ULA --timing_analysis_only
 Info: Parallel compilation is enabled and will use 4 of the 4 processors detected
-Info: Longest tpd from source pin "B[0]" to destination pin "RComple[2]" is 9.658 ns
-    Info: 1: + IC(0.000 ns) + CELL(0.799 ns) = 0.799 ns; Loc. = PIN_W10; Fanout = 5; PIN Node = 'B[0]'
-    Info: 2: + IC(3.780 ns) + CELL(0.346 ns) = 4.925 ns; Loc. = LCCOMB_X23_Y1_N20; Fanout = 1; COMB Node = 'Sum4Bit:inst6|SumBitBit:inst2|inst2'
-    Info: 3: + IC(2.781 ns) + CELL(1.952 ns) = 9.658 ns; Loc. = PIN_E12; Fanout = 0; PIN Node = 'RComple[2]'
-    Info: Total cell delay = 3.097 ns ( 32.07 % )
-    Info: Total interconnect delay = 6.561 ns ( 67.93 % )
+Info: Longest tpd from source pin "Entrada[1]" to destination pin "numero[0]" is 10.316 ns
+    Info: 1: + IC(0.000 ns) + CELL(0.847 ns) = 0.847 ns; Loc. = PIN_C8; Fanout = 7; PIN Node = 'Entrada[1]'
+    Info: 2: + IC(4.336 ns) + CELL(0.357 ns) = 5.540 ns; Loc. = LCCOMB_X33_Y16_N30; Fanout = 1; COMB Node = 'display_ula:inst|led_g:inst6|inst6~0'
+    Info: 3: + IC(2.814 ns) + CELL(1.962 ns) = 10.316 ns; Loc. = PIN_Y14; Fanout = 0; PIN Node = 'numero[0]'
+    Info: Total cell delay = 3.166 ns ( 30.69 % )
+    Info: Total interconnect delay = 7.150 ns ( 69.31 % )
 Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 237 megabytes
-    Info: Processing ended: Wed Oct 31 20:54:01 2018
+    Info: Peak virtual memory: 207 megabytes
+    Info: Processing ended: Sun Nov 04 17:20:22 2018
     Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:00
 

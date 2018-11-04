@@ -1,85 +1,107 @@
-|Complemento2
-Overflow <= Sum4Bit:inst6.Overflow
-B[0] => inst1.IN0
-B[1] => inst2.IN0
-B[2] => inst3.IN0
-B[3] => inst4.IN0
-RComple[0] <= Sum4Bit:inst6.R[0]
-RComple[1] <= Sum4Bit:inst6.R[1]
-RComple[2] <= Sum4Bit:inst6.R[2]
-RComple[3] <= Sum4Bit:inst6.R[3]
+|conversor_ula
+led_sinal <= Entrada[3].DB_MAX_OUTPUT_PORT_TYPE
+Entrada[0] => display_ula:inst.Entrada[0]
+Entrada[1] => display_ula:inst.Entrada[1]
+Entrada[2] => display_ula:inst.Entrada[2]
+Entrada[3] => led_sinal.DATAIN
+numero[0] <= display_ula:inst.Saida[0]
+numero[1] <= display_ula:inst.Saida[1]
+numero[2] <= display_ula:inst.Saida[2]
+numero[3] <= display_ula:inst.Saida[3]
+numero[4] <= display_ula:inst.Saida[4]
+numero[5] <= display_ula:inst.Saida[5]
+numero[6] <= display_ula:inst.Saida[6]
 
 
-|Complemento2|Sum4Bit:inst6
-Overflow <= inst5.DB_MAX_OUTPUT_PORT_TYPE
-P => SumBitBit:inst.Carry_In
-A0 => SumBitBit:inst.A
-B0 => SumBitBit:inst.B
-A1 => SumBitBit:inst1.A
-B1 => SumBitBit:inst1.B
-A2 => SumBitBit:inst2.A
-B2 => SumBitBit:inst2.B
-A3 => SumBitBit:inst3.A
-B3 => SumBitBit:inst3.B
-R[0] <= SumBitBit:inst.Result
-R[1] <= SumBitBit:inst1.Result
-R[2] <= SumBitBit:inst2.Result
-R[3] <= SumBitBit:inst3.Result
+|conversor_ula|display_ula:inst
+Saida[0] <= led_g:inst6.led_g
+Saida[1] <= led_f:inst5.led_f
+Saida[2] <= led_e:inst4.led_e
+Saida[3] <= led_d:inst3.led_d
+Saida[4] <= led_c:inst2.led_c
+Saida[5] <= led_b:inst1.led_b
+Saida[6] <= led_a:inst.led_a
+Entrada[0] => led_a:inst.C
+Entrada[0] => led_b:inst1.C
+Entrada[0] => led_c:inst2.C
+Entrada[0] => led_d:inst3.C
+Entrada[0] => led_e:inst4.C
+Entrada[0] => led_f:inst5.C
+Entrada[0] => led_g:inst6.C
+Entrada[1] => led_a:inst.B
+Entrada[1] => led_b:inst1.B
+Entrada[1] => led_c:inst2.B
+Entrada[1] => led_d:inst3.B
+Entrada[1] => led_e:inst4.B
+Entrada[1] => led_f:inst5.B
+Entrada[1] => led_g:inst6.B
+Entrada[2] => led_a:inst.A
+Entrada[2] => led_b:inst1.A
+Entrada[2] => led_c:inst2.A
+Entrada[2] => led_d:inst3.A
+Entrada[2] => led_e:inst4.A
+Entrada[2] => led_f:inst5.A
+Entrada[2] => led_g:inst6.A
 
 
-|Complemento2|Sum4Bit:inst6|SumBitBit:inst3
-Result <= inst2.DB_MAX_OUTPUT_PORT_TYPE
-Carry_In => inst.IN0
-Carry_In => inst4.IN1
-Carry_In => inst3.IN1
-A => inst.IN1
+|conversor_ula|display_ula:inst|led_a:inst
+led_a <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+C => inst6.IN0
+C => inst.IN0
+A => inst6.IN1
 A => inst3.IN0
-A => inst5.IN1
-B => inst2.IN1
-B => inst4.IN0
+B => inst4.IN1
+
+
+|conversor_ula|display_ula:inst|led_b:inst1
+led_b <= inst7.DB_MAX_OUTPUT_PORT_TYPE
 B => inst5.IN0
-Carry_Out <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+B => inst3.IN0
+C => inst5.IN1
+C => inst4.IN0
+A => inst.IN0
 
 
-|Complemento2|Sum4Bit:inst6|SumBitBit:inst2
-Result <= inst2.DB_MAX_OUTPUT_PORT_TYPE
-Carry_In => inst.IN0
-Carry_In => inst4.IN1
-Carry_In => inst3.IN1
-A => inst.IN1
-A => inst3.IN0
-A => inst5.IN1
+|conversor_ula|display_ula:inst|led_c:inst2
+led_c <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+B => inst.IN0
+C => inst2.IN1
+A => inst2.IN2
+
+
+|conversor_ula|display_ula:inst|led_d:inst3
+led_d <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst8.IN0
+B => inst5.IN1
+B => inst7.IN0
+B => inst3.IN0
+C => inst4.IN0
+C => inst8.IN2
+
+
+|conversor_ula|display_ula:inst|led_e:inst4
+led_e <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+C => inst3.IN0
+B => inst5.IN1
+A => inst.IN0
+
+
+|conversor_ula|display_ula:inst|led_f:inst5
+led_f <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+B => inst3.IN0
+C => inst4.IN0
+A => inst1.IN0
+A => inst.IN0
+
+
+|conversor_ula|display_ula:inst|led_g:inst6
+led_g <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst5.IN0
+A => inst1.IN0
 B => inst2.IN1
-B => inst4.IN0
-B => inst5.IN0
-Carry_Out <= inst6.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|Complemento2|Sum4Bit:inst6|SumBitBit:inst1
-Result <= inst2.DB_MAX_OUTPUT_PORT_TYPE
-Carry_In => inst.IN0
-Carry_In => inst4.IN1
-Carry_In => inst3.IN1
-A => inst.IN1
-A => inst3.IN0
-A => inst5.IN1
-B => inst2.IN1
-B => inst4.IN0
-B => inst5.IN0
-Carry_Out <= inst6.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|Complemento2|Sum4Bit:inst6|SumBitBit:inst
-Result <= inst2.DB_MAX_OUTPUT_PORT_TYPE
-Carry_In => inst.IN0
-Carry_In => inst4.IN1
-Carry_In => inst3.IN1
-A => inst.IN1
-A => inst3.IN0
-A => inst5.IN1
-B => inst2.IN1
-B => inst4.IN0
-B => inst5.IN0
-Carry_Out <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+B => inst3.IN0
+C => inst4.IN0
 
 

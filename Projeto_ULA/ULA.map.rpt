@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ULA
-Wed Oct 31 20:53:51 2018
+Sun Nov 04 17:20:15 2018
 Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
 
 
@@ -40,16 +40,16 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                 ;
 +-------------------------------+----------------------------------------------+
-; Analysis & Synthesis Status   ; Successful - Wed Oct 31 20:53:51 2018        ;
+; Analysis & Synthesis Status   ; Successful - Sun Nov 04 17:20:15 2018        ;
 ; Quartus II Version            ; 9.1 Build 350 03/24/2010 SP 2 SJ Web Edition ;
 ; Revision Name                 ; ULA                                          ;
-; Top-level Entity Name         ; Complemento2                                 ;
+; Top-level Entity Name         ; conversor_ula                                ;
 ; Family                        ; Stratix II                                   ;
 ; Logic utilization             ; N/A                                          ;
-;     Combinational ALUTs       ; 4                                            ;
+;     Combinational ALUTs       ; 7                                            ;
 ;     Dedicated logic registers ; 0                                            ;
 ; Total registers               ; 0                                            ;
-; Total pins                    ; 9                                            ;
+; Total pins                    ; 12                                           ;
 ; Total virtual pins            ; 0                                            ;
 ; Total block memory bits       ; 0                                            ;
 ; DSP block 9-bit elements      ; 0                                            ;
@@ -63,7 +63,7 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
-; Top-level entity name                                                      ; Complemento2       ; ULA                ;
+; Top-level entity name                                                      ; conversor_ula      ; ULA                ;
 ; Family name                                                                ; Stratix II         ; Stratix II         ;
 ; Use Generated Physical Constraints File                                    ; Off                ;                    ;
 ; Use smart compilation                                                      ; Off                ; Off                ;
@@ -155,55 +155,61 @@ applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                              ;
-+-------------------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------------------------------+
-; File Name with User-Entered Path          ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                                     ;
-+-------------------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------------------------------+
-; ../ULA (aquivos projeto)/Complemento2.bdf ; yes             ; User Block Diagram/Schematic File  ; C:/Users/bmgs/Desktop/projeto_sd-master/projeto_sd-master/ULA (aquivos projeto)/Complemento2.bdf ;
-; ../ULA (aquivos projeto)/Sum4Bit.bdf      ; yes             ; User Block Diagram/Schematic File  ; C:/Users/bmgs/Desktop/projeto_sd-master/projeto_sd-master/ULA (aquivos projeto)/Sum4Bit.bdf      ;
-; ../ULA (aquivos projeto)/SumBitBit.bdf    ; yes             ; User Block Diagram/Schematic File  ; C:/Users/bmgs/Desktop/projeto_sd-master/projeto_sd-master/ULA (aquivos projeto)/SumBitBit.bdf    ;
-+-------------------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                               ;
++--------------------------------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------------------+
+; File Name with User-Entered Path                       ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                         ;
++--------------------------------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------------------+
+; ../ULA (aquivos projeto)/display_ULA/conversor_ula.bdf ; yes             ; User Block Diagram/Schematic File  ; C:/Users/bmgs/Desktop/projeto_sd/ULA (aquivos projeto)/display_ULA/conversor_ula.bdf ;
+; ../ULA (aquivos projeto)/display_ULA/display_ula.bdf   ; yes             ; User Block Diagram/Schematic File  ; C:/Users/bmgs/Desktop/projeto_sd/ULA (aquivos projeto)/display_ULA/display_ula.bdf   ;
+; ../ULA (aquivos projeto)/display_ULA/led_a.bdf         ; yes             ; User Block Diagram/Schematic File  ; C:/Users/bmgs/Desktop/projeto_sd/ULA (aquivos projeto)/display_ULA/led_a.bdf         ;
+; ../ULA (aquivos projeto)/display_ULA/led_b.bdf         ; yes             ; User Block Diagram/Schematic File  ; C:/Users/bmgs/Desktop/projeto_sd/ULA (aquivos projeto)/display_ULA/led_b.bdf         ;
+; ../ULA (aquivos projeto)/display_ULA/led_c.bdf         ; yes             ; User Block Diagram/Schematic File  ; C:/Users/bmgs/Desktop/projeto_sd/ULA (aquivos projeto)/display_ULA/led_c.bdf         ;
+; ../ULA (aquivos projeto)/display_ULA/led_d.bdf         ; yes             ; User Block Diagram/Schematic File  ; C:/Users/bmgs/Desktop/projeto_sd/ULA (aquivos projeto)/display_ULA/led_d.bdf         ;
+; ../ULA (aquivos projeto)/display_ULA/led_e.bdf         ; yes             ; User Block Diagram/Schematic File  ; C:/Users/bmgs/Desktop/projeto_sd/ULA (aquivos projeto)/display_ULA/led_e.bdf         ;
+; ../ULA (aquivos projeto)/display_ULA/led_f.bdf         ; yes             ; User Block Diagram/Schematic File  ; C:/Users/bmgs/Desktop/projeto_sd/ULA (aquivos projeto)/display_ULA/led_f.bdf         ;
+; ../ULA (aquivos projeto)/display_ULA/led_g.bdf         ; yes             ; User Block Diagram/Schematic File  ; C:/Users/bmgs/Desktop/projeto_sd/ULA (aquivos projeto)/display_ULA/led_g.bdf         ;
++--------------------------------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------------------+
 
 
-+-------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary           ;
-+-----------------------------------------------+-------+
-; Resource                                      ; Usage ;
-+-----------------------------------------------+-------+
-; Estimated ALUTs Used                          ; 4     ;
-; Dedicated logic registers                     ; 0     ;
-;                                               ;       ;
-; Estimated ALUTs Unavailable                   ; 0     ;
-;                                               ;       ;
-; Total combinational functions                 ; 4     ;
-; Combinational ALUT usage by number of inputs  ;       ;
-;     -- 7 input functions                      ; 0     ;
-;     -- 6 input functions                      ; 0     ;
-;     -- 5 input functions                      ; 0     ;
-;     -- 4 input functions                      ; 2     ;
-;     -- <=3 input functions                    ; 2     ;
-;                                               ;       ;
-; Combinational ALUTs by mode                   ;       ;
-;     -- normal mode                            ; 4     ;
-;     -- extended LUT mode                      ; 0     ;
-;     -- arithmetic mode                        ; 0     ;
-;     -- shared arithmetic mode                 ; 0     ;
-;                                               ;       ;
-; Estimated ALUT/register pairs used            ; 4     ;
-;                                               ;       ;
-; Total registers                               ; 0     ;
-;     -- Dedicated logic registers              ; 0     ;
-;     -- I/O registers                          ; 0     ;
-;                                               ;       ;
-; Estimated ALMs:  partially or completely used ; 2     ;
-;                                               ;       ;
-; I/O pins                                      ; 9     ;
-; Maximum fan-out node                          ; B[0]  ;
-; Maximum fan-out                               ; 5     ;
-; Total fan-out                                 ; 18    ;
-; Average fan-out                               ; 1.38  ;
-+-----------------------------------------------+-------+
++------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                ;
++-----------------------------------------------+------------+
+; Resource                                      ; Usage      ;
++-----------------------------------------------+------------+
+; Estimated ALUTs Used                          ; 7          ;
+; Dedicated logic registers                     ; 0          ;
+;                                               ;            ;
+; Estimated ALUTs Unavailable                   ; 0          ;
+;                                               ;            ;
+; Total combinational functions                 ; 7          ;
+; Combinational ALUT usage by number of inputs  ;            ;
+;     -- 7 input functions                      ; 0          ;
+;     -- 6 input functions                      ; 0          ;
+;     -- 5 input functions                      ; 0          ;
+;     -- 4 input functions                      ; 0          ;
+;     -- <=3 input functions                    ; 7          ;
+;                                               ;            ;
+; Combinational ALUTs by mode                   ;            ;
+;     -- normal mode                            ; 7          ;
+;     -- extended LUT mode                      ; 0          ;
+;     -- arithmetic mode                        ; 0          ;
+;     -- shared arithmetic mode                 ; 0          ;
+;                                               ;            ;
+; Estimated ALUT/register pairs used            ; 7          ;
+;                                               ;            ;
+; Total registers                               ; 0          ;
+;     -- Dedicated logic registers              ; 0          ;
+;     -- I/O registers                          ; 0          ;
+;                                               ;            ;
+; Estimated ALMs:  partially or completely used ; 4          ;
+;                                               ;            ;
+; I/O pins                                      ; 12         ;
+; Maximum fan-out node                          ; Entrada[2] ;
+; Maximum fan-out                               ; 7          ;
+; Total fan-out                                 ; 29         ;
+; Average fan-out                               ; 1.53       ;
++-----------------------------------------------+------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -211,11 +217,15 @@ applicable agreement for further details.
 +----------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+------+--------------+---------------------------------------------+--------------+
 ; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name                         ; Library Name ;
 +----------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+------+--------------+---------------------------------------------+--------------+
-; |Complemento2              ; 4 (0)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 9    ; 0            ; |Complemento2                               ; work         ;
-;    |Sum4Bit:inst6|         ; 4 (1)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Complemento2|Sum4Bit:inst6                 ;              ;
-;       |SumBitBit:inst1|    ; 1 (1)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Complemento2|Sum4Bit:inst6|SumBitBit:inst1 ; work         ;
-;       |SumBitBit:inst2|    ; 1 (1)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Complemento2|Sum4Bit:inst6|SumBitBit:inst2 ; work         ;
-;       |SumBitBit:inst3|    ; 1 (1)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Complemento2|Sum4Bit:inst6|SumBitBit:inst3 ; work         ;
+; |conversor_ula             ; 7 (0)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 12   ; 0            ; |conversor_ula                              ; work         ;
+;    |display_ula:inst|      ; 7 (0)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |conversor_ula|display_ula:inst             ;              ;
+;       |led_a:inst|         ; 1 (1)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |conversor_ula|display_ula:inst|led_a:inst  ; work         ;
+;       |led_b:inst1|        ; 1 (1)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |conversor_ula|display_ula:inst|led_b:inst1 ; work         ;
+;       |led_c:inst2|        ; 1 (1)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |conversor_ula|display_ula:inst|led_c:inst2 ; work         ;
+;       |led_d:inst3|        ; 1 (1)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |conversor_ula|display_ula:inst|led_d:inst3 ; work         ;
+;       |led_e:inst4|        ; 1 (1)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |conversor_ula|display_ula:inst|led_e:inst4 ; work         ;
+;       |led_f:inst5|        ; 1 (1)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |conversor_ula|display_ula:inst|led_f:inst5 ; work         ;
+;       |led_g:inst6|        ; 1 (1)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |conversor_ula|display_ula:inst|led_g:inst6 ; work         ;
 +----------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+------+--------------+---------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -241,76 +251,82 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
-    Info: Processing started: Wed Oct 31 20:53:49 2018
+    Info: Processing started: Sun Nov 04 17:20:14 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ULA -c ULA
 Info: Parallel compilation is enabled and will use 4 of the 4 processors detected
-Info: Found 1 design units, including 1 entities, in source file /users/bmgs/desktop/projeto_sd-master/projeto_sd-master/ula (aquivos projeto)/display_ula/conversor_ula.bdf
+Info: Found 1 design units, including 1 entities, in source file /users/bmgs/desktop/projeto_sd/ula (aquivos projeto)/display_ula/conversor_ula.bdf
     Info: Found entity 1: conversor_ula
-Info: Found 1 design units, including 1 entities, in source file /users/bmgs/desktop/projeto_sd-master/projeto_sd-master/ula (aquivos projeto)/display_ula/display_ula.bdf
+Info: Found 1 design units, including 1 entities, in source file /users/bmgs/desktop/projeto_sd/ula (aquivos projeto)/display_ula/display_ula.bdf
     Info: Found entity 1: display_ula
-Info: Found 1 design units, including 1 entities, in source file /users/bmgs/desktop/projeto_sd-master/projeto_sd-master/ula (aquivos projeto)/display_ula/led_a.bdf
+Info: Found 1 design units, including 1 entities, in source file /users/bmgs/desktop/projeto_sd/ula (aquivos projeto)/display_ula/led_a.bdf
     Info: Found entity 1: led_a
-Info: Found 1 design units, including 1 entities, in source file /users/bmgs/desktop/projeto_sd-master/projeto_sd-master/ula (aquivos projeto)/display_ula/led_b.bdf
+Info: Found 1 design units, including 1 entities, in source file /users/bmgs/desktop/projeto_sd/ula (aquivos projeto)/display_ula/led_b.bdf
     Info: Found entity 1: led_b
-Info: Found 1 design units, including 1 entities, in source file /users/bmgs/desktop/projeto_sd-master/projeto_sd-master/ula (aquivos projeto)/display_ula/led_c.bdf
+Info: Found 1 design units, including 1 entities, in source file /users/bmgs/desktop/projeto_sd/ula (aquivos projeto)/display_ula/led_c.bdf
     Info: Found entity 1: led_c
-Info: Found 1 design units, including 1 entities, in source file /users/bmgs/desktop/projeto_sd-master/projeto_sd-master/ula (aquivos projeto)/display_ula/led_d.bdf
+Info: Found 1 design units, including 1 entities, in source file /users/bmgs/desktop/projeto_sd/ula (aquivos projeto)/display_ula/led_d.bdf
     Info: Found entity 1: led_d
-Info: Found 1 design units, including 1 entities, in source file /users/bmgs/desktop/projeto_sd-master/projeto_sd-master/ula (aquivos projeto)/display_ula/led_e.bdf
+Info: Found 1 design units, including 1 entities, in source file /users/bmgs/desktop/projeto_sd/ula (aquivos projeto)/display_ula/led_e.bdf
     Info: Found entity 1: led_e
-Info: Found 1 design units, including 1 entities, in source file /users/bmgs/desktop/projeto_sd-master/projeto_sd-master/ula (aquivos projeto)/display_ula/led_f.bdf
+Info: Found 1 design units, including 1 entities, in source file /users/bmgs/desktop/projeto_sd/ula (aquivos projeto)/display_ula/led_f.bdf
     Info: Found entity 1: led_f
-Info: Found 1 design units, including 1 entities, in source file /users/bmgs/desktop/projeto_sd-master/projeto_sd-master/ula (aquivos projeto)/display_ula/led_g.bdf
+Info: Found 1 design units, including 1 entities, in source file /users/bmgs/desktop/projeto_sd/ula (aquivos projeto)/display_ula/led_g.bdf
     Info: Found entity 1: led_g
-Info: Found 1 design units, including 1 entities, in source file /users/bmgs/desktop/projeto_sd-master/projeto_sd-master/ula (aquivos projeto)/and4bit.bdf
+Info: Found 1 design units, including 1 entities, in source file /users/bmgs/desktop/projeto_sd/ula (aquivos projeto)/and4bit.bdf
     Info: Found entity 1: And4Bit
-Info: Found 1 design units, including 1 entities, in source file /users/bmgs/desktop/projeto_sd-master/projeto_sd-master/ula (aquivos projeto)/anothermux.bdf
+Info: Found 1 design units, including 1 entities, in source file /users/bmgs/desktop/projeto_sd/ula (aquivos projeto)/anothermux.bdf
     Info: Found entity 1: AnotherMux
-Info: Found 1 design units, including 1 entities, in source file /users/bmgs/desktop/projeto_sd-master/projeto_sd-master/ula (aquivos projeto)/complemento2.bdf
+Info: Found 1 design units, including 1 entities, in source file /users/bmgs/desktop/projeto_sd/ula (aquivos projeto)/complemento2.bdf
     Info: Found entity 1: Complemento2
-Info: Found 1 design units, including 1 entities, in source file /users/bmgs/desktop/projeto_sd-master/projeto_sd-master/ula (aquivos projeto)/igual4bits.bdf
+Info: Found 1 design units, including 1 entities, in source file /users/bmgs/desktop/projeto_sd/ula (aquivos projeto)/igual4bits.bdf
     Info: Found entity 1: Igual4Bits
-Info: Found 1 design units, including 1 entities, in source file /users/bmgs/desktop/projeto_sd-master/projeto_sd-master/ula (aquivos projeto)/maior_menor.bdf
+Info: Found 1 design units, including 1 entities, in source file /users/bmgs/desktop/projeto_sd/ula (aquivos projeto)/maior_menor.bdf
     Info: Found entity 1: Maior_Menor
-Info: Found 1 design units, including 1 entities, in source file /users/bmgs/desktop/projeto_sd-master/projeto_sd-master/ula (aquivos projeto)/maiorq1bit.bdf
+Info: Found 1 design units, including 1 entities, in source file /users/bmgs/desktop/projeto_sd/ula (aquivos projeto)/maiorq1bit.bdf
     Info: Found entity 1: MaiorQ1Bit
-Info: Found 1 design units, including 1 entities, in source file /users/bmgs/desktop/projeto_sd-master/projeto_sd-master/ula (aquivos projeto)/maiorq3bit.bdf
+Info: Found 1 design units, including 1 entities, in source file /users/bmgs/desktop/projeto_sd/ula (aquivos projeto)/maiorq3bit.bdf
     Info: Found entity 1: MaiorQ3Bit
-Info: Found 1 design units, including 1 entities, in source file /users/bmgs/desktop/projeto_sd-master/projeto_sd-master/ula (aquivos projeto)/mux3to1.bdf
+Info: Found 1 design units, including 1 entities, in source file /users/bmgs/desktop/projeto_sd/ula (aquivos projeto)/mux3to1.bdf
     Info: Found entity 1: Mux3to1
-Info: Found 1 design units, including 1 entities, in source file /users/bmgs/desktop/projeto_sd-master/projeto_sd-master/ula (aquivos projeto)/mux5to1.bdf
+Info: Found 1 design units, including 1 entities, in source file /users/bmgs/desktop/projeto_sd/ula (aquivos projeto)/mux5to1.bdf
     Info: Found entity 1: Mux5to1
-Info: Found 1 design units, including 1 entities, in source file /users/bmgs/desktop/projeto_sd-master/projeto_sd-master/ula (aquivos projeto)/muxcomparadores.bdf
+Info: Found 1 design units, including 1 entities, in source file /users/bmgs/desktop/projeto_sd/ula (aquivos projeto)/muxcomparadores.bdf
     Info: Found entity 1: MuxComparadores
-Info: Found 1 design units, including 1 entities, in source file /users/bmgs/desktop/projeto_sd-master/projeto_sd-master/ula (aquivos projeto)/outromux.bdf
+Info: Found 1 design units, including 1 entities, in source file /users/bmgs/desktop/projeto_sd/ula (aquivos projeto)/outromux.bdf
     Info: Found entity 1: OutroMux
-Info: Found 1 design units, including 1 entities, in source file /users/bmgs/desktop/projeto_sd-master/projeto_sd-master/ula (aquivos projeto)/signal.bdf
+Info: Found 1 design units, including 1 entities, in source file /users/bmgs/desktop/projeto_sd/ula (aquivos projeto)/signal.bdf
     Info: Found entity 1: Signal
-Info: Found 1 design units, including 1 entities, in source file /users/bmgs/desktop/projeto_sd-master/projeto_sd-master/ula (aquivos projeto)/sum_sub.bdf
+Info: Found 1 design units, including 1 entities, in source file /users/bmgs/desktop/projeto_sd/ula (aquivos projeto)/sum_sub.bdf
     Info: Found entity 1: Sum_Sub
-Info: Found 1 design units, including 1 entities, in source file /users/bmgs/desktop/projeto_sd-master/projeto_sd-master/ula (aquivos projeto)/sum4bit.bdf
+Info: Found 1 design units, including 1 entities, in source file /users/bmgs/desktop/projeto_sd/ula (aquivos projeto)/sum4bit.bdf
     Info: Found entity 1: Sum4Bit
-Info: Found 1 design units, including 1 entities, in source file /users/bmgs/desktop/projeto_sd-master/projeto_sd-master/ula (aquivos projeto)/sumbitbit.bdf
+Info: Found 1 design units, including 1 entities, in source file /users/bmgs/desktop/projeto_sd/ula (aquivos projeto)/sumbitbit.bdf
     Info: Found entity 1: SumBitBit
-Info: Found 1 design units, including 1 entities, in source file /users/bmgs/desktop/projeto_sd-master/projeto_sd-master/ula (aquivos projeto)/ulator.bdf
+Info: Found 1 design units, including 1 entities, in source file /users/bmgs/desktop/projeto_sd/ula (aquivos projeto)/ulator.bdf
     Info: Found entity 1: ULATOR
-Info: Found 1 design units, including 1 entities, in source file /users/bmgs/desktop/projeto_sd-master/projeto_sd-master/ula (aquivos projeto)/xor4bits.bdf
+Info: Found 1 design units, including 1 entities, in source file /users/bmgs/desktop/projeto_sd/ula (aquivos projeto)/xor4bits.bdf
     Info: Found entity 1: XOR4Bits
 Info: Found 1 design units, including 1 entities, in source file ula.bdf
     Info: Found entity 1: ULA
 Info: Found 1 design units, including 1 entities, in source file main.bdf
     Info: Found entity 1: MAIN
-Info: Elaborating entity "Complemento2" for the top level hierarchy
-Info: Elaborating entity "Sum4Bit" for hierarchy "Sum4Bit:inst6"
-Info: Elaborating entity "SumBitBit" for hierarchy "Sum4Bit:inst6|SumBitBit:inst3"
-Info: Implemented 13 device resources after synthesis - the final resource count might be different
+Info: Elaborating entity "conversor_ula" for the top level hierarchy
+Info: Elaborating entity "display_ula" for hierarchy "display_ula:inst"
+Info: Elaborating entity "led_a" for hierarchy "display_ula:inst|led_a:inst"
+Info: Elaborating entity "led_b" for hierarchy "display_ula:inst|led_b:inst1"
+Info: Elaborating entity "led_c" for hierarchy "display_ula:inst|led_c:inst2"
+Info: Elaborating entity "led_d" for hierarchy "display_ula:inst|led_d:inst3"
+Info: Elaborating entity "led_e" for hierarchy "display_ula:inst|led_e:inst4"
+Info: Elaborating entity "led_f" for hierarchy "display_ula:inst|led_f:inst5"
+Info: Elaborating entity "led_g" for hierarchy "display_ula:inst|led_g:inst6"
+Info: Implemented 19 device resources after synthesis - the final resource count might be different
     Info: Implemented 4 input pins
-    Info: Implemented 5 output pins
-    Info: Implemented 4 logic cells
+    Info: Implemented 8 output pins
+    Info: Implemented 7 logic cells
 Info: Quartus II Analysis & Synthesis was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 278 megabytes
-    Info: Processing ended: Wed Oct 31 20:53:51 2018
-    Info: Elapsed time: 00:00:02
+    Info: Peak virtual memory: 249 megabytes
+    Info: Processing ended: Sun Nov 04 17:20:15 2018
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:02
 
 
